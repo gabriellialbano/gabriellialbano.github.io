@@ -14,8 +14,8 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #f7f7f7;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f2f2f2;
   color: #333;
 }
 
@@ -26,18 +26,32 @@ body {
   margin: 40px auto;
   padding: 30px;
   background-color: #fff;
-  border: 1px solid #ddd;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .portfolio h1 {
   margin-top: 0;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
-  color: #337ab7;
+  color: #2196f3;
   text-align: center;
   margin-bottom: 20px;
+  position: relative;
+}
+
+.portfolio h1::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background-color: #2196f3;
+  border-radius: 50%;
+  z-index: -1;
 }
 
 .portfolio img {
@@ -51,24 +65,24 @@ body {
 
 .portfolio a {
   text-decoration: none;
-  color: #337ab7;
+  color: #2196f3;
   transition: color 0.2s ease;
 }
 
 .portfolio a:hover {
-  color: #23527c;
+  color: #1976d2;
 }
 
 .portfolio a::after {
   content: '\2192';
   font-size: 18px;
   margin-left: 10px;
-  color: #337ab7;
+  color: #2196f3;
   transition: color 0.2s ease;
 }
 
 .portfolio a:hover::after {
-  color: #23527c;
+  color: #1976d2;
 }
 
 /* Nested Portfolio Styles */
@@ -76,11 +90,11 @@ body {
 .portfolio .portfolio {
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #ccc;
 }
 
 .portfolio .portfolio h1 {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
