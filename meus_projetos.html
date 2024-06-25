@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus projetos</title>
     <style> 
-  
+   /* Global styles */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,6 +16,11 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 /* Portfolio styles */
@@ -26,6 +32,9 @@ body {
   background-color: #fff;
   border: 1px solid #ddd;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .portfolio h1 {
@@ -33,6 +42,7 @@ body {
   font-size: 24px;
   font-weight: bold;
   color: #333;
+  margin-bottom: 10px;
 }
 
 .portfolio img {
@@ -46,18 +56,56 @@ body {
 .portfolio a {
   text-decoration: none;
   color: #337ab7;
+  transition: color 0.2s ease;
 }
 
 .portfolio a:hover {
   color: #23527c;
 }
 
-/* Nested portfolio styles */
+/* Project styles */
 
-.portfolio .portfolio {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid #ddd;
+.project {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.project:last-child {
+  border-bottom: none;
+}
+
+.project h1 {
+  margin-top: 0;
+}
+
+.project img {
+  margin-bottom: 10px;
+}
+
+.project a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-color: #337ab7;
+  color: #fff;
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.project a:hover {
+  background-color: #23527c;
+}
+
+/* Responsive design */
+
+@media (max-width: 600px) {
+  .portfolio {
+    max-width: 90%;
+  }
+  .project img {
+    height: 100px;
+  }
 }
     </style>
 </head>
